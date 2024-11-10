@@ -62,13 +62,16 @@ def add_data_to_csv_file(output, filName, ip):
             if line.startswith(" "):
                 columns = line.split()
                 ip_node = columns[1]
-                get_Domain_Name(ip_node)
+                if ip_node != '???':
+                    domain_name = get_Domain_Name(ip_node)
+                else:
+                    domain_name = '???'
                 if len(columns) > 7: 
                     writer.writerow({
                         'DateTime': timestamp,
                         'Hop': columns[0].strip('.|--'),
                         'IP': columns[1],
-                        'Domain Name': ip_node,
+                        'Domain Name': domain_name,
                         'Loss%': columns[2],
                         'Sent': columns[3],
                         'Last': columns[4],
