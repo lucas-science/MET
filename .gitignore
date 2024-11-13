@@ -1,0 +1,7 @@
+./first_test
+./resultat_fouchy
+./resultat_train
+*.csv
+*.png
+./traitement_donnés/data
+./traitement_donnés/path
