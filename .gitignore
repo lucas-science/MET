@@ -1,6 +1,4 @@
 ./first_test
 ./resultat_train
-*.csv
-*.png
 ./traitement_donnés/data
 ./traitement_donnés/path
